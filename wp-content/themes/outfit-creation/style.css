@@ -1,0 +1,240 @@
+/*
+Theme Name: Outfit Creation
+Theme URI: http://example.com/outfit-creation/
+Author: Antigravity
+Author URI: http://example.com/
+Description: Custom WordPress theme for Outfit Creation, a garment manufacturing brand in Nepal.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: outfit-creation
+*/
+
+:root {
+    /* Elegant muted gold/tan */
+    --color-light: #FAFAFA;
+    --font-heading: 'Iowan Old Style', 'Playfair Display', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-logo: 'Outfit', sans-serif;
+}
+
+/* Basic Reset & Typography */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    margin: 0;
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: transparent;
+    padding: 3rem 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-text {
+    font-family: var(--font-logo);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 3.5rem;
+}
+
+.main-navigation a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 5% 0;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--color-accent);
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+.hero-title {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 1.05;
+    margin-bottom: 3.5rem;
+    letter-spacing: -0.02em;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1.25rem 3.5rem;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+/* Strategic Negative Space Sections */
+.section-padding {
+    padding: 12rem 6%;
+}
+
+.about-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 3.5rem;
+    line-height: 1.15;
+}
+
+.about-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    color: #555;
+}
+
+/* Collections Grid */
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.collection-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #EBEBEB;
+    margin-bottom: 2rem;
+    transition: transform 0.6s ease;
+}
+
+.collection-card:hover .collection-img-placeholder {
+    transform: scale(0.98);
+}
+
+.collection-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.collection-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+}
+
+.collection-link:hover {
+    color: var(--color-text);
+}
+
+/* Footer layout */
+.site-footer {
+    padding: 4rem 6%;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--color-text);
+}

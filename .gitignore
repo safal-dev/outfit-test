@@ -1,0 +1,12 @@
+# ignore WP plugins and uploads
+wp-content/uploads/
+wp-content/plugins/
+wp-content/cache/
+wp-content/upgrade/
+
+# ignore this deployment instruction file
+production.md
+
+# ignore environment files
+.env
+.DS_Store
