@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    # Ensure the target directory exists
+    - /bin/mkdir -p ~/test.chautaracreation.com/wp-content/themes/outfit-creation/
+    # Copy the custom theme files to the production directory
+    - /bin/cp -R wp-content/themes/outfit-creation/* ~/test.chautaracreation.com/wp-content/themes/outfit-creation/
