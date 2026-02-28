@@ -16,6 +16,8 @@
             --color-accent: <?php echo esc_attr( get_theme_mod( 'theme_accent_color', '#BFA175' ) ); ?>;
             --color-text: <?php echo esc_attr( get_theme_mod( 'theme_text_color', '#171717' ) ); ?>;
             --color-bg: <?php echo esc_attr( get_theme_mod( 'theme_bg_color', '#FFFFFF' ) ); ?>;
+            --color-anim-1: <?php echo esc_attr( get_theme_mod( 'theme_anim_color_1', '#F2EDE4' ) ); ?>;
+            --color-anim-2: <?php echo esc_attr( get_theme_mod( 'theme_anim_color_2', '#EAE4D9' ) ); ?>;
         }
     </style>
 </head>

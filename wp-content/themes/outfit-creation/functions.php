@@ -96,6 +96,17 @@ function outfit_creation_customize_register( $wp_customize ) {
         'type'    => 'text',
     ) );
 
+    // Hero Background Animation Toggle
+    $wp_customize->add_setting( 'hero_animation_toggle', array(
+        'default'           => true,
+        'sanitize_callback' => 'rest_sanitize_boolean',
+    ) );
+    $wp_customize->add_control( 'hero_animation_toggle', array(
+        'label'   => __( 'Enable Subtle Background Animation', 'outfit-creation' ),
+        'section' => 'outfit_creation_hero_section',
+        'type'    => 'checkbox',
+    ) );
+
     // 2. Color Settings (Accent Color)
     $wp_customize->add_setting( 'theme_accent_color', array(
         'default'           => '#BFA175',
@@ -123,6 +134,26 @@ function outfit_creation_customize_register( $wp_customize ) {
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_bg_color', array(
         'label'   => __( 'Background Color', 'outfit-creation' ),
+        'section' => 'colors',
+    ) ) );
+
+    // Animation Color 1
+    $wp_customize->add_setting( 'theme_anim_color_1', array(
+        'default'           => '#F2EDE4',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_anim_color_1', array(
+        'label'   => __( 'Animation Color 1', 'outfit-creation' ),
+        'section' => 'colors',
+    ) ) );
+
+    // Animation Color 2
+    $wp_customize->add_setting( 'theme_anim_color_2', array(
+        'default'           => '#EAE4D9',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_anim_color_2', array(
+        'label'   => __( 'Animation Color 2', 'outfit-creation' ),
         'section' => 'colors',
     ) ) );
 }
